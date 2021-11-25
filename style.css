@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+:root{
+    --bg-color:#f3f3f3;
+    --txt-color:black;
+}
+
+[data-dark= 'oscuro'] {
+    --bg-color:#3f3f3f;
+    --txt-color:#fff;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+}
+
+
+/*------LOGO--------*/
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: default;
+    
+    
+}
+
+.logo h1{
+    display: flex;
+   font-size: 3rem;
+   padding-left: 30%;
+}
+/*-----TOGGLE-------*/
+#label__toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(91, 98, 98);
+    width: 82px;
+    height: 35px;
+    position: relative;
+    border-radius: 25px;
+}
+
+#label__toggle span{
+font-size: 2rem;
+padding: 0 3px;
+}
+
+#toggle{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circulo::before{
+    content: ' ';
+    position: absolute;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    top: -2px;
+    left: -1px;
+    cursor: pointer;
+    transition: .4s;
+    box-shadow: blueviolet 0 0 5px 0 ;
+}
+
+input:checked + .circulo::before{
+    transform: translateX(45px);
+}
+/*-----NAVEGACION------*/
+.menu{
+    display: flex;
+    min-height: 8vh;
+   
+    align-items: center;
+    justify-content: center;
+}
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+
+}
+
+.enlaces-menu li{
+    list-style-type: none;
+    padding: 0 20px;
+    transition: .2s;
+}
+
+.enlaces-menu a{
+    text-decoration: none;
+    color: var(--txt-color);
+    font-size: 2rem;
+}
+
+.enlaces-menu li:hover{
+    background-color: turquoise;
+    border-radius: 30px;
+}
+
+/*-----BOTON-------*/
+.boton{
+
+    display: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.boton:hover{
+    transform: rotate(180deg);
+}
+
+.boton span{
+    display: block;
+    background-color: rgb(91, 98, 98);
+    width: 30px;
+    height: 4px;
+   margin: 4px auto;
+ 
+   
+}
+
+/*------BANNER-------*/
+.banner{
+   margin-bottom: auto;
+    display: flex;
+    min-height: 100px;
+    justify-content: space-around;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    cursor: default;
+}
+
+.banner div{
+    
+    font-size: 3rem;
+    border-bottom: 3px gray solid;
+}
+
+.final-articulos h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+
+/*----Carousel-------*/
+
+.carousel__container{
+    position: relative;
+    margin: 50px;
+}
+
+.carousel__anterior,
+.carousel__siguiente{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    text-align: center;
+    color: var(--txt-color);
+    opacity: 50%;
+}
+
+.carousel__anterior{
+    left: 20px;
+   position: absolute;
+  
+}
+
+.carousel__siguiente{
+    right: 30px;
+    position: absolute;
+  
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover{
+  opacity: 2;
+}
+
+
+/*-------MEDIO--------*/
+.final{
+    display: block;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.final h1{
+    justify-content: center;
+    display: flex;
+    font-size: 3em;
+    text-shadow: 
+    .02em .025em 0 yellow,
+    .05em .05em 0 blue,
+    .075em .075em 0 red,
+    .1em .1em 0 black;
+}
+
+.final p{
+    justify-content: center;
+    display: flex;
+}
+
+.final img{
+    width: 100%;
+}
+
+
+/*-----FOOTER-----*/
+
+footer{
+    margin-top: 50px;
+    border-top: 2px gray solid;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+footer .redes{
+    display: flex;
+   padding: 0;
+   list-style-type: none;
+}
+
+.redes li{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.redes a{
+    display: block;
+    font-size: 2rem;
+    color: var(--txt-color);
+    transition: .3s;
+}
+
+.redes li:hover{
+    display: block;
+    background-color: turquoise;
+   border-radius: 25px;
+   transform: translateY(-3px) scale(1.05);
+}
+
+.redes a:hover{
+transform: translateY(-10px) scale(1.05);
+}
+
+.cortado{
+  background: url(https://www.olbap.mx/contenido/0c3e91e42blog.jpg);
+display: flex;
+height: 80vh;
+background-size: cover;
+   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+
+
+/*------MOVIL--------*/
+
+
+@media (max-width: 700px) {
+    .menu{
+        flex-direction: column;
+          position: absolute;
+    }
+    .enlaces-menu {
+        flex-direction: column;
+        display: none;
+    }
+   .enlaces-menu li{
+       display: flex;
+       justify-content: center;
+       padding: 10px 0; 
+       width: 100px;
+   }
+
+
+   .boton{
+      
+       display: block;
+       position: absolute;
+       top: -40px;
+       left: 35px;
+    }
+
+    .boton:hover{
+        opacity: .4;
+    }
+
+   
+}
+
+
+@keyframes muestraMenu{
+   from{
+       opacity: 0;
+   }
+   to{
+       opacity: 1;
+   }
+}
+.enlaces-menu.activado{
+    display: flex;
+    animation: muestraMenu 250ms ease-in-out both;
+}
+
+.br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado{
+    opacity: 0;
+}
+
+.br-3.animado{
+    transform: rotate(45deg) translate(-9px, -5px);
+}
